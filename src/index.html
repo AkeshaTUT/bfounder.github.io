@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future AI</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/carousel.css">
+</head>
+<body>
+    <div class="logo fade-in delay-1">
+        <img src="images/logo.png" alt="BFounder Logo">
+    </div>
+    
+    <div class="carousel fade-in delay-2">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-slide active">
+                <img src="images/robot-1.png" alt="AI Robot">
+                <h2>Unlock the Power of Future AI</h2>
+                <p>Chat with the smartest AI future. Experience power of AI with us.</p>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+                <img src="images/robot-2.png" alt="AI Assistant">
+                <h2>Chat With Your Favourite AI</h2>
+                <p>Chat with the smartest AI future. Experience power of AI with us.</p>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+                <img src="images/robot-3.png" alt="AI Mind">
+                <h2>Boost Your Mind Power with AI</h2>
+                <p>Chat with the smartest AI future. Experience power of AI with us.</p>
+            </div>
+        </div>
+        
+        <div class="carousel-nav">
+            <span class="nav-dot active"></span>
+            <span class="nav-dot"></span>
+            <span class="nav-dot"></span>
+        </div>
+    </div>
+
+    <div class="founder-section fade-in delay-3">
+        <h1>BECOME A FOUNDER</h1>
+        <div class="founder-text">
+            <p class="founder-description">BFounder - это цифровой бизнес-ассистент с ИИ. Платформа, сопровождающая пользователей от идеи до запуска бизнеса.</p>
+        </div>
+        <a href="https://t.me/BeFounderbot" class="black-button">
+            Перейди в нашего Telegram-бота с ИИ
+        </a>
+
+        <div class="about-us fade-in delay-4">
+            <h2>О Нас</h2>
+            <p class="about-description">
+                BFounder - это цифровая платформа и мобильное приложение с искусственным интеллектом, которое помогает пользователям пройти полный цикл создания бизнеса от выбора идеи до масштабирования и автоматизации. В отличие от традиционных образовательных программ, бизнес-курсов или консалтинговых услуг, BFounder сочетает в себе аналитику, генерацию бизнес-модели и персональные рекомендации, которые адаптируются под каждого пользователя.
+                <br><br>
+                Платформа предназначена для будущих и действующих предпринимателей, фрилансеров, самозанятых и малого бизнеса, которые хотят оптимизировать путь создания компании, снизить риски и повысить шансы на успех.
+                <br><br>
+                BFounder работает по принципу пошагового мастера, где пользователь отвечает на вопросы, а ИИ формирует персональные рекомендации по развитию бизнеса. В процессе работы платформа анализирует рынок, оценивает спрос, определяет ключевые риски и предлагает стратегию развития, включая финансовое планирование, маркетинговые инструменты и автоматизацию процессов.
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer fade-in delay-4">
+        <div class="footer-logo">
+            <img src="images/logo.png" width="50px" alt="BFounder Logo">
+        </div>
+        <nav class="footer-nav">
+            <a href="pages/help.html" class="footer-link">Help</a>
+            <a href="pages/join.html" class="footer-link">Join Us</a>
+            <a href="pages/signin.html" class="footer-link">Sign In</a>
+        </nav>
+    </footer>
+
+    <script src="js/carousel.js"></script>
+    <script>
+        // Добавляем обработчик для анимации появления
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

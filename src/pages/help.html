@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - BFounder</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="logo fade-in delay-1">
+        <a href="/">
+            <img src="../images/logo.png" alt="BFounder Logo">
+        </a>
+    </div>
+
+    <div class="page-content fade-in delay-2">
+        <h1>Help Center</h1>
+        <div class="help-sections">
+            <section class="help-section">
+                <h2>Frequently Asked Questions</h2>
+                <ul class="faq-list">
+                    <li>
+                        <h3>What is BFounder?</h3>
+                        <p>BFounder is an AI-powered business assistant platform that helps users from idea to business launch.</p>
+                    </li>
+                    <li>
+                        <h3>How can I get started?</h3>
+                        <p>Simply sign up through our Telegram bot and start exploring the possibilities!</p>
+                    </li>
+                </ul>
+            </section>
+            <div style="text-align: center;">
+                <a href="../index.html" class="return-button">
+                    Вернуться на главную страницу
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer fade-in delay-3">
+        <div class="footer-logo">
+            <img src="../images/logo.png" width="50px" alt="BFounder Logo">
+        </div>
+        <nav class="footer-nav">
+            <a href="help.html" class="footer-link">Help</a>
+            <a href="join.html" class="footer-link">Join Us</a>
+            <a href="signin.html" class="footer-link">Sign In</a>
+        </nav>
+    </footer>
+    
+    <script>
+        // Добавляем обработчик для анимации появления
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

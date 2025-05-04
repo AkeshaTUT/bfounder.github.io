@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - BFounder</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="logo fade-in delay-1">
+        <a href="/">
+            <img src="../images/logo.png" alt="BFounder Logo">
+        </a>
+    </div>
+
+    <div class="page-content fade-in delay-2">
+        <h1>Join BFounder</h1>
+        <div class="join-content">
+            <section class="benefits-section">
+                <h2>Why you should Join Us?</h2>
+                <ul class="benefits-list">
+                    <li>Access to AI-powered business tools</li>
+                    <li>Community support</li>
+                    <li>Expert guidance</li>
+                </ul>
+            </section>
+            <a href="https://t.me/bfounderai" class="black-button">
+                Join via Telegram
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer fade-in delay-3">
+        <div class="footer-logo">
+            <img src="../images/logo.png" width="50px" alt="BFounder Logo">
+        </div>
+        <nav class="footer-nav">
+            <a href="help.html" class="footer-link">Help</a>
+            <a href="join.html" class="footer-link">Join Us</a>
+            <a href="signin.html" class="footer-link">Sign In</a>
+        </nav>
+    </footer>
+    
+    <script>
+        // Добавляем обработчик для анимации появления
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
